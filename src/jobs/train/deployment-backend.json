@@ -1,0 +1,30 @@
+{
+    "repo_credential_id": "test",
+    "repo_owner_name": "sidiqputra",
+    "pipeline_script_name": "Jenkinsfile",
+    "days_to_keep": 3,
+    "num_to_keep": 5,
+    "squads": [
+        {
+            "host": "test",
+            "worker": "worker-test",
+            "project": [
+                {
+                    "name": "TIX-LOCAL-DSL1",
+                    "port": "1415",
+                    "path_list": "com/test"
+                },
+                {
+                    "name": "TIX-LOCAL-DSL2",
+                    "port": "1414",
+                    "path_list": "com/test2"
+                },
+                {
+                    "name": "TIX-LOCAL-DSL3",
+                    "port": "1416",
+                    "path_list": "com/test3"
+                }
+            ]
+        }
+    ]
+}
