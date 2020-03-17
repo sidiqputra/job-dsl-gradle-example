@@ -1,6 +1,6 @@
 import groovy.json.JsonSlurper
 
-def inputFile = readFileFromWorkspace("./src/jobs/test-job/deployment-backend.json")
+def inputFile = readFileFromWorkspace("./src/jobs/hello-job/deployment-backend.json")
 def InputJSON = new JsonSlurper().parseText(inputFile)
 
 for(i=0; i<InputJSON.squads.size(); i++ ) {
