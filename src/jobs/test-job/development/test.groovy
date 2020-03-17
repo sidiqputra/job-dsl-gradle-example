@@ -1,7 +1,7 @@
 import groovy.json.JsonSlurper
 
 def inputFile = readFileFromWorkspace("./src/jobs/test-job/deployment-backend.json")
-def InputJSON = new JsonSlurper().parseText(inputFile.text)
+def InputJSON = new JsonSlurper().parseText(inputFile)
 def project_env = "DEV"
 
 for(i=0; i<InputJSON.squads.size(); i++ ) {
