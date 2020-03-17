@@ -2,7 +2,6 @@ import groovy.json.JsonSlurper
 
 def inputFile = readFileFromWorkspace("./src/jobs/test-job/deployment-backend.json")
 def InputJSON = new JsonSlurper().parseText(inputFile)
-def project_env = "DEV"
 
 for(i=0; i<InputJSON.squads.size(); i++ ) {
   def squad = InputJSON.squads[i]
@@ -12,7 +11,7 @@ for(i=0; i<InputJSON.squads.size(); i++ ) {
   for (j = 0; j < squad.project.size(); j++) {
     def project_name = squad.project[j].name
 
-    pipelineJob("${project_env}/${project_name}") {
+    pipelineJob("${project_name}") {
 
       properties {
         disableConcurrentBuilds()
