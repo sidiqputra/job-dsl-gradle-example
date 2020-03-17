@@ -15,7 +15,7 @@
                     "path_list": "com/test"
                 },
                 {
-                    "name": "TIX-LOCAL-DSL2",
+                    "name": "TIX-LOCAL-DSL5",
                     "port": "1414",
                     "path_list": "com/test2"
                 },
