@@ -1,4 +1,8 @@
-node('master') {
-    def rootDir = pwd()
-    systemGroovyCommand("${rootDir}@script/src/jobs/hello-job/development/hello.groovy")
+node {
+    jobDsl scriptText: 'job("example-2")'
+
+    jobDsl targets: ['src/jobs/hello-job/**/.groovy', 'src/jobs/test-job/**/.groovy'].join('\n'),
+           removedJobAction: 'DELETE',
+           removedViewAction: 'DELETE',
+           lookupStrategy: 'SEED_JOB',
 }
